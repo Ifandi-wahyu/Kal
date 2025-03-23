@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Determinan Matriks &#8212; My sample book</title>
+    <title>Matriks &#8212; My sample book</title>
   
   
   
@@ -185,7 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Materi%201.html">Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matrik.html">Matrik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matriks_Baris_Elementer.html">Matriks Baris Elementer</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Determinan Matriks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matriks</a></li>
 </ul>
 
     </div>
@@ -371,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Determinan Matriks</h1>
+    <h1>Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,13 +381,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Determinan Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">Determinan Matriks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">Minor Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kofaktor-matriks">Kofaktor Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-kofaktor-matriks">Mencari Determinan dengan Konsep Minor dan Kofaktor Matriks</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-33">Contoh Matriks 3×3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-44">Contoh Matriks 4×4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-55">Contoh Matriks 5×5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-3x3">Contoh Matriks 3x3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-minor-dan-kofaktor">Menghitung Minor dan Kofaktor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-4x4">Contoh Matriks 4x4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-5x5">Contoh Matriks 5x5</a></li>
 </ul>
 </li>
 </ul>
@@ -403,63 +404,142 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="determinan-matriks">
-<h1>Determinan Matriks<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h1>
-<section id="id1">
-<h2>Determinan Matriks<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Determinan suatu matriks adalah nilai skalar yang dihitung dari elemen-elemen matriks tersebut. Determinan digunakan dalam berbagai bidang matematika, termasuk dalam menyelesaikan sistem persamaan linear, menemukan invers matriks, dan banyak lagi.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="matriks">
+<h1>Matriks<a class="headerlink" href="#matriks" title="Link to this heading">#</a></h1>
+<section id="determinan-matriks">
+<h2>Determinan Matriks<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h2>
+<p>Determinan matriks adalah suatu nilai skalar yang dapat dihitung dari elemen-elemen sebuah matriks persegi (matriks dengan jumlah baris dan kolom yang sama). Determinan memiliki banyak aplikasi dalam aljabar linear, termasuk dalam mencari invers matriks, menyelesaikan sistem persamaan linear, dan menentukan apakah suatu matriks memiliki solusi unik.</p>
 <section id="minor-matriks">
 <h3>Minor Matriks<a class="headerlink" href="#minor-matriks" title="Link to this heading">#</a></h3>
-<p>Minor dari elemen (a_{ij}) dalam matriks adalah determinan dari submatriks yang diperoleh dengan menghapus baris ke-(i) dan kolom ke-(j) dari matriks asal.</p>
+<p>Minor suatu elemen dalam matriks adalah determinan dari submatriks yang diperoleh dengan menghapus satu baris dan satu kolom tempat elemen tersebut berada. Minor ini digunakan dalam berbagai perhitungan dalam aljabar linear, termasuk dalam kofaktor, determinan, dan invers matriks.</p>
 </section>
 <section id="kofaktor-matriks">
 <h3>Kofaktor Matriks<a class="headerlink" href="#kofaktor-matriks" title="Link to this heading">#</a></h3>
-<p>Kofaktor dari elemen (a_{ij}) adalah minor elemen tersebut dikalikan dengan faktor tanda:
-[
-C_{ij} = (-1)^{i+j} M_{ij}
-]
-dengan (M_{ij}) adalah minor dari elemen (a_{ij}).</p>
+<p>Kofaktor matriks adalah matriks yang memiliki elemen-elemen yang di dalamnya juga disebut kofaktor.</p>
 </section>
 <section id="mencari-determinan-dengan-konsep-minor-dan-kofaktor-matriks">
 <h3>Mencari Determinan dengan Konsep Minor dan Kofaktor Matriks<a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-kofaktor-matriks" title="Link to this heading">#</a></h3>
-<p>Determinan dapat dihitung dengan ekspansi kofaktor pada baris atau kolom tertentu.</p>
-<section id="contoh-matriks-33">
-<h4>Contoh Matriks 3×3<a class="headerlink" href="#contoh-matriks-33" title="Link to this heading">#</a></h4>
-<p>Misalkan kita memiliki matriks:</p>
+<section id="contoh-matriks-3x3">
+<h4>Contoh Matriks 3x3<a class="headerlink" href="#contoh-matriks-3x3" title="Link to this heading">#</a></h4>
+<p>Misalkan kita memiliki matriks <span class="math notranslate nohighlight">\(A\)</span> sebagai berikut:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = 
-\begin{bmatrix} 
-1 &amp; 2 &amp; 3 \\ 
-4 &amp; 5 &amp; 6 \\ 
-7 &amp; 8 &amp; 9 
+A =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
 \end{bmatrix}
 \end{split}\]</div>
-<p>Determinan dihitung sebagai:
-$<span class="math notranslate nohighlight">\(
-det(A) = 1 \cdot \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} - 2 \cdot \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} + 3 \cdot \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix}
-\)</span>$</p>
+<p>Kita akan menghitung determinan menggunakan ekspansi kofaktor berdasarkan baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}
+\]</div>
+<p>di mana <span class="math notranslate nohighlight">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span> adalah kofaktor dari elemen <span class="math notranslate nohighlight">\(a_{ij}\)</span>, dan <span class="math notranslate nohighlight">\(M_{ij}\)</span> adalah minor dari elemen tersebut.</p>
 </section>
-<section id="contoh-matriks-44">
-<h4>Contoh Matriks 4×4<a class="headerlink" href="#contoh-matriks-44" title="Link to this heading">#</a></h4>
+<section id="menghitung-minor-dan-kofaktor">
+<h4>Menghitung Minor dan Kofaktor<a class="headerlink" href="#menghitung-minor-dan-kofaktor" title="Link to this heading">#</a></h4>
+<p><strong>Minor dan Kofaktor untuk <span class="math notranslate nohighlight">\(a_{11} = 1\)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-B = 
-\begin{bmatrix} 
+M_{11} =
+\begin{vmatrix}
+5 &amp; 6 \\
+8 &amp; 9
+\end{vmatrix} = (5 \times 9 - 6 \times 8) = -3
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+C_{11} = (-1)^{1+1} M_{11} = (-1)^2 (-3) = -3
+\]</div>
+<p><strong>Minor dan Kofaktor untuk <span class="math notranslate nohighlight">\(a_{12} = 2\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M_{12} =
+\begin{vmatrix}
+4 &amp; 6 \\
+7 &amp; 9
+\end{vmatrix} = (4 \times 9 - 6 \times 7) = -6
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+C_{12} = (-1)^{1+2} M_{12} = (-1)^3 (-6) = 6
+\]</div>
+<p><strong>Minor dan Kofaktor untuk <span class="math notranslate nohighlight">\(a_{13} = 3\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M_{13} =
+\begin{vmatrix}
+4 &amp; 5 \\
+7 &amp; 8
+\end{vmatrix} = (4 \times 8 - 5 \times 7) = -3
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+C_{13} = (-1)^{1+3} M_{13} = (-1)^4 (-3) = -3
+\]</div>
+<p><strong>Menghitung Determinan</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = (1 \times -3) + (2 \times 6) + (3 \times -3)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= -3 + 12 - 9 = 0
+\]</div>
+<p>Jadi, determinan dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 0
+\]</div>
+<p>Karena determinan nol, matriks ini <strong>singular</strong> dan tidak memiliki invers.</p>
+</section>
+<section id="contoh-matriks-4x4">
+<h4>Contoh Matriks 4x4<a class="headerlink" href="#contoh-matriks-4x4" title="Link to this heading">#</a></h4>
+<p>Misalkan kita memiliki matriks <span class="math notranslate nohighlight">\(A\)</span> sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
 1 &amp; 2 &amp; 3 &amp; 4 \\
 5 &amp; 6 &amp; 7 &amp; 8 \\
-9 &amp; 10 &amp; 11 &amp; 12 \\ 
-13 &amp; 14 &amp; 15 &amp; 16 
+9 &amp; 10 &amp; 11 &amp; 12 \\
+13 &amp; 14 &amp; 15 &amp; 16
 \end{bmatrix}
 \end{split}\]</div>
-<p>Determinan dihitung dengan ekspansi kofaktor pada baris pertama.</p>
+<p>Menggunakan ekspansi kofaktor berdasarkan baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} + a_{14}C_{14}
+\]</div>
+<p>Dengan perhitungan minor dan kofaktor, hasilnya:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 0
+\]</div>
+<p>Matriks ini <strong>singular</strong> dan tidak memiliki invers.</p>
 </section>
-<section id="contoh-matriks-55">
-<h4>Contoh Matriks 5×5<a class="headerlink" href="#contoh-matriks-55" title="Link to this heading">#</a></h4>
-<p>Perhitungan determinan untuk matriks 5×5 mengikuti pola yang sama dengan ekspansi kofaktor.</p>
-<blockquote>
-<div><p><strong>Catatan:</strong> Proses perhitungan determinan untuk matriks besar lebih efisien menggunakan metode lain seperti eliminasi Gauss.</p>
-</div></blockquote>
+<section id="contoh-matriks-5x5">
+<h4>Contoh Matriks 5x5<a class="headerlink" href="#contoh-matriks-5x5" title="Link to this heading">#</a></h4>
+<p>Misalkan kita memiliki matriks <span class="math notranslate nohighlight">\(A\)</span> sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15 \\
+16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 \\
+21 &amp; 22 &amp; 23 &amp; 24 &amp; 25
+\end{bmatrix}
+\end{split}\]</div>
+<p>Dengan ekspansi kofaktor berdasarkan baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 0
+\]</div>
+<p>Sehingga matriks ini juga <strong>singular</strong> dan tidak memiliki invers.</p>
 </section>
 </section>
 </section>
@@ -529,13 +609,14 @@ B =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Determinan Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">Determinan Matriks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">Minor Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kofaktor-matriks">Kofaktor Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-kofaktor-matriks">Mencari Determinan dengan Konsep Minor dan Kofaktor Matriks</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-33">Contoh Matriks 3×3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-44">Contoh Matriks 4×4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-55">Contoh Matriks 5×5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-3x3">Contoh Matriks 3x3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-minor-dan-kofaktor">Menghitung Minor dan Kofaktor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-4x4">Contoh Matriks 4x4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-5x5">Contoh Matriks 5x5</a></li>
 </ul>
 </li>
 </ul>
