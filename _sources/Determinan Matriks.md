@@ -1,6 +1,6 @@
 # Determinan Matriks
 
-## H2 Determinan Matriks
+## Determinan Matriks
 Determinan suatu matriks adalah nilai skalar yang dihitung dari elemen-elemen matriks tersebut. Determinan digunakan dalam berbagai bidang matematika, termasuk dalam menyelesaikan sistem persamaan linear, menemukan invers matriks, dan banyak lagi.
 
 ### H3 Minor Matriks
