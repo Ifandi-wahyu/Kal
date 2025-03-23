@@ -3,17 +3,17 @@
 ## Determinan Matriks
 Determinan suatu matriks adalah nilai skalar yang dihitung dari elemen-elemen matriks tersebut. Determinan digunakan dalam berbagai bidang matematika, termasuk dalam menyelesaikan sistem persamaan linear, menemukan invers matriks, dan banyak lagi.
 
-### H3 Minor Matriks
+### Minor Matriks
 Minor dari elemen \(a_{ij}\) dalam matriks adalah determinan dari submatriks yang diperoleh dengan menghapus baris ke-\(i\) dan kolom ke-\(j\) dari matriks asal.
 
-### H3 Kofaktor Matriks
+### Kofaktor Matriks
 Kofaktor dari elemen \(a_{ij}\) adalah minor elemen tersebut dikalikan dengan faktor tanda:
 \[
 C_{ij} = (-1)^{i+j} M_{ij}
 \]
 dengan \(M_{ij}\) adalah minor dari elemen \(a_{ij}\).
 
-### H3 Mencari Determinan dengan Konsep Minor dan Kofaktor Matriks
+### Mencari Determinan dengan Konsep Minor dan Kofaktor Matriks
 Determinan dapat dihitung dengan ekspansi kofaktor pada baris atau kolom tertentu. 
 
 #### Contoh Matriks 3×3
