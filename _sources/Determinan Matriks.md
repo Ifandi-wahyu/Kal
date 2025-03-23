@@ -18,18 +18,32 @@ Determinan dapat dihitung dengan ekspansi kofaktor pada baris atau kolom tertent
 
 #### Contoh Matriks 3×3
 Misalkan kita memiliki matriks:
-\[
-A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
-\]
+
+$$
+A = 
+\begin{bmatrix} 
+1 & 2 & 3 \\ 
+4 & 5 & 6 \\ 
+7 & 8 & 9 
+\end{bmatrix}
+$$
+
 Determinan dihitung sebagai:
-\[
+$$
 det(A) = 1 \cdot \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} - 2 \cdot \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} + 3 \cdot \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix}
-\]
+$$
 
 #### Contoh Matriks 4×4
-\[
-B = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \\ 13 & 14 & 15 & 16 \end{bmatrix}
-\]
+$$
+B = 
+\begin{bmatrix} 
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 \\ 
+13 & 14 & 15 & 16 
+\end{bmatrix}
+$$
+
 Determinan dihitung dengan ekspansi kofaktor pada baris pertama.
 
 #### Contoh Matriks 5×5

@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Determinan Matriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -423,21 +425,34 @@ dengan (M_{ij}) adalah minor dari elemen (a_{ij}).</p>
 <p>Determinan dapat dihitung dengan ekspansi kofaktor pada baris atau kolom tertentu.</p>
 <section id="contoh-matriks-33">
 <h4>Contoh Matriks 3×3<a class="headerlink" href="#contoh-matriks-33" title="Link to this heading">#</a></h4>
-<p>Misalkan kita memiliki matriks:
-[
-A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{bmatrix}
-]
-Determinan dihitung sebagai:
-[
-det(A) = 1 \cdot \begin{vmatrix} 5 &amp; 6 \ 8 &amp; 9 \end{vmatrix} - 2 \cdot \begin{vmatrix} 4 &amp; 6 \ 7 &amp; 9 \end{vmatrix} + 3 \cdot \begin{vmatrix} 4 &amp; 5 \ 7 &amp; 8 \end{vmatrix}
-]</p>
+<p>Misalkan kita memiliki matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 \\ 
+4 &amp; 5 &amp; 6 \\ 
+7 &amp; 8 &amp; 9 
+\end{bmatrix}
+\end{split}\]</div>
+<p>Determinan dihitung sebagai:
+$<span class="math notranslate nohighlight">\(
+det(A) = 1 \cdot \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} - 2 \cdot \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} + 3 \cdot \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix}
+\)</span>$</p>
 </section>
 <section id="contoh-matriks-44">
 <h4>Contoh Matriks 4×4<a class="headerlink" href="#contoh-matriks-44" title="Link to this heading">#</a></h4>
-<p>[
-B = \begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \ 5 &amp; 6 &amp; 7 &amp; 8 \ 9 &amp; 10 &amp; 11 &amp; 12 \ 13 &amp; 14 &amp; 15 &amp; 16 \end{bmatrix}
-]
-Determinan dihitung dengan ekspansi kofaktor pada baris pertama.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B = 
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\ 
+13 &amp; 14 &amp; 15 &amp; 16 
+\end{bmatrix}
+\end{split}\]</div>
+<p>Determinan dihitung dengan ekspansi kofaktor pada baris pertama.</p>
 </section>
 <section id="contoh-matriks-55">
 <h4>Contoh Matriks 5×5<a class="headerlink" href="#contoh-matriks-55" title="Link to this heading">#</a></h4>
