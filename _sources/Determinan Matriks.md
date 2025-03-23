@@ -2,7 +2,7 @@
 title: Matriks
 ---
 
-# Matriks
+# Determinan Matriks
 
 ## Determinan Matriks
 
